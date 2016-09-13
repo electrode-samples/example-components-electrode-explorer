@@ -1,6 +1,6 @@
 {
   "name": "resource-list",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "resource-list",
   "main": "lib/index.js",
   "author": {
