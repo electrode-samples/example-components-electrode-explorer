@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from "react";
 
-import styles from "../styles/resource-list.css";
+import styles from "../../src/styles/resource-list.css";
 import RenderFriend from "./render-friend";
 import GuestList from "./guest-list";
 

@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "../styles/resource-list.css";
+import styles from "../../src/styles/resource-list.css";
 import style from "../helpers/graph-styles";
 
 const DEFAULT_SIZE = 15;
