@@ -1,0 +1,35 @@
+{
+  "name": "resource-list",
+  "version": "1.0.0",
+  "description": "resource-list",
+  "main": "lib/index.js",
+  "author": {
+    "name": "tiffine-koch",
+    "url": "https://github.com/tiffine-koch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/electrode-io/resource-list.git"
+  },
+  "bugs": {
+    "url": "https://github.com/electrode-io/resource-list/issues"
+  },
+  "homepage": "https://github.com/electrode-io/resource-list",
+  "dependencies": {},
+  "devDependencies": {
+    "electrode-archetype-react-component": "^1.1.0",
+    "electrode-archetype-react-component-dev": "^1.1.0"
+  },
+  "engines": {
+    "node": "^4.2.6",
+    "npm": "^3.5.3"
+  },
+  "scripts": {
+  },
+  "keywords": [
+    "react",
+    "electrode",
+    "electrode-component",
+    "react-component"
+  ]
+}
