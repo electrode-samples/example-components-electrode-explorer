@@ -1,6 +1,6 @@
 {
   "name": "resource-list",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "resource-list",
   "main": "lib/index.js",
   "author": {
@@ -24,8 +24,7 @@
     "node": "^4.2.6",
     "npm": "^3.5.3"
   },
-  "scripts": {
-  },
+  "scripts": {},
   "keywords": [
     "react",
     "electrode",
