@@ -1,11 +1,9 @@
-# resource-list
+# house-party
 
 __COMPONENT DESCRIPTION GOES HERE__
 
 
 ## Demo & Examples
-
-Live demo: [tiffine-koch.github.io/resource-list](http://tiffine-koch.github.io/resource-list/)
 
 To build the examples locally, run:
 
@@ -19,12 +17,12 @@ Then open [`localhost:8000`](http://localhost:8000) in a browser.
 
 ## Installation
 
-The easiest way to use resource-list is to install it from NPM and include it in your own React build process (using [Browserify](http://browserify.org), [Webpack](http://webpack.github.io/), etc).
+The easiest way to use house-party is to install it from NPM and include it in your own React build process (using [Browserify](http://browserify.org), [Webpack](http://webpack.github.io/), etc).
 
-You can also use the standalone build by including `dist/resource-list.js` in your page. If you use this, make sure you have already included React, and it is available as a global variable.
+You can also use the standalone build by including `dist/house-party.js` in your page. If you use this, make sure you have already included React, and it is available as a global variable.
 
 ```
-npm install resource-list --save
+npm install house-party --save
 ```
 
 
@@ -33,9 +31,9 @@ npm install resource-list --save
 __EXPLAIN USAGE HERE__
 
 ```
-var ResourceList = require('resource-list');
+var HouseParty = require('house-party');
 
-<ResourceList>Example</ResourceList>
+<HouseParty>Example</HouseParty>
 ```
 
 ### Properties
@@ -57,5 +55,4 @@ To build, watch and serve the examples (which will also watch the component sour
 
 __PUT LICENSE HERE__
 
-Copyright (c) 2016 tiffine-koch.
-
+Copyright (c) 2016 james-mcintyre.

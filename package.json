@@ -1,20 +1,20 @@
 {
-  "name": "resource-list",
+  "name": "electrode-houseparty-example-component",
   "version": "1.0.3",
-  "description": "resource-list",
+  "description": "electrode-houseparty-example-component",
   "main": "lib/index.js",
   "author": {
-    "name": "tiffine-koch",
-    "url": "https://github.com/tiffine-koch"
+    "name": "james-mcintyre",
+    "url": "https://github.com/jamesmcintyre"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/electrode-io/resource-list.git"
+    "url": "https://github.com/electrode-io/electrode-houseparty-example-component.git"
   },
   "bugs": {
-    "url": "https://github.com/electrode-io/resource-list/issues"
+    "url": "https://github.com/electrode-io/electrode-houseparty-example-component/issues"
   },
-  "homepage": "https://github.com/electrode-io/resource-list",
+  "homepage": "https://github.com/electrode-io/electrode-houseparty-example-component",
   "dependencies": {},
   "devDependencies": {
     "electrode-archetype-react-component": "^1.1.0",
