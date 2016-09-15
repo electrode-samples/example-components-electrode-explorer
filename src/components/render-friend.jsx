@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "../../src/styles/resource-list.css";
+import styles from "../../src/styles/render-friend.css";
 import style from "../helpers/graph-styles";
 
 const DEFAULT_SIZE = 15;
@@ -20,8 +20,7 @@ const RenderFriend = ({friend, styleObj, className}) => {
 
   applyStyle = friends ? style("container", size) : applyStyle;
   let applyClass = friends ? styles.join : styles.friend;
-  console.log('className', className);
-  applyClass = styleObj ? applyClass : `${applyClass} ${styles.join} ${className || ''}`;
+  applyClass = styleObj ? applyClass : `${applyClass} ${styles.join} ${className || ""}`;
 
   const renderFriends = (friendsArr) => {
     const angleVal = (DEGREES_OF_COOL / friendsArr.length);

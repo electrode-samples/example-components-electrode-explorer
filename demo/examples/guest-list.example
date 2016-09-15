@@ -1,0 +1,8 @@
+<GuestList
+  invitees={[
+  {name: 'John Smith', invited: false},
+  {name: 'Jane Smith', invited: false},
+  {name: 'Dan Jones', invited: false}
+  ]}
+  toggleGuest={(invitee) => alert(invitee.name)}
+  />

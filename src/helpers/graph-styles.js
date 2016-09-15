@@ -34,7 +34,7 @@ export default (type, size, rotateVal) => {
 
   case "child": {
     const childNode = {
-      transform: `rotate(${rotateVal * 1}deg) translate(${nodeSize * PARENT.divisor}em) rotate(${rotateVal * CHILD.rotateBack}deg)`,
+      transform: `rotate(${rotateVal * 1}deg) translate(${nodeSize * PARENT.divisor}em) rotate(${rotateVal * CHILD.rotateBack}deg)`, // eslint-disable-line max-len
       backgroundSize: `100%`
     };
     return Object.assign(parentOrSingle, childNode);
