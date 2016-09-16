@@ -24,7 +24,9 @@
     "node": "^4.2.6",
     "npm": "^3.5.3"
   },
-  "scripts": {},
+  "scripts": {
+    "prepublish": "gulp prepublish"
+  },
   "keywords": [
     "react",
     "electrode",
