@@ -1,6 +1,6 @@
 {
   "name": "electrode-houseparty-example-component",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "electrode-houseparty-example-component",
   "main": "lib/index.js",
   "author": {
