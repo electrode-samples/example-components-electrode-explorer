@@ -8,26 +8,11 @@ export default class HouseParty extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      invitees: this.props.ourFriends.map(({name}) => {
-        return { name, invited: false};
-      })
-    };
   }
 
-  componentWillReceiveProps(nextProps) {
-    this.setState = {
-      invitees: nextProps.ourFriends.map(({name}) => {
-        return { name, invited: false};
-      })
-    };
-  }
-
-  renderFriends(friends) {
-    const invitees = this.state.invitees;
-    const partyTime = invitees.length === invitees.filter((i) => i.invited).length
-    ? styles.party
-    : "";
+  renderFriends(friends, party) {
+    const invitees = this.props.invitees;
+    const partyTime = party ? styles.party : "";
 
     return friends
       .filter((friend) => {
@@ -40,17 +25,7 @@ export default class HouseParty extends Component {
       ));
   }
 
-  toggleGuest({name, invited}) {
-    const invitees = this.state.invitees.map((invitee) => {
-      if (invitee.name === name) {
-        invitee.invited = !invited;
-      }
-      return invitee;
-    });
-    this.setState({invitees});
-  }
-
-  viewState({ view }) {
+  viewState(view) {
     if (view) {
       return view;
     }
@@ -60,30 +35,28 @@ export default class HouseParty extends Component {
     };
   }
 
-  houseParty(invitees) {
-    return invitees.length === invitees.filter((invitee) => {
-      return invitee.invited;
-    }).length && invitees.length !== 0
-    ? `${styles.houseParty} ${styles.house}`
-    : styles.house;
+  houseParty(invitees, party) {
+    return party
+      ? `${styles.houseParty} ${styles.house}`
+      : styles.house;
   }
 
   render() {
-    const { ourFriends, message } = this.props;
-    const { invitees } = this.state;
-    const { invite, intro } = this.viewState(this.props);
-    const houseParty = this.houseParty(invitees);
+    const { ourFriends, invitees, view, message, toggleGuest } = this.props;
+    const party = invitees.length === invitees.filter((invitee) => invitee.invited).length &&
+      invitees.length > 0;
+    const { invite, intro } = this.viewState(view);
+    const houseParty = this.houseParty(invitees, party);
 
     return (
       <div>
-        {invite && !!invitees.length &&
-          <GuestList invitees={invitees} toggleGuest={(invitee) => this.toggleGuest(invitee)}/>}
+        {invite && invitees.length > 0 &&
+          <GuestList invitees={invitees} toggleGuest={(invitee) => toggleGuest(invitee)}/>}
         <div className={styles.container}>
-        {intro && !invitees.filter((invitee) => invitee.invited).length &&
-          <p className={styles.message}>{message}</p>}
+        {intro && !invitees.filter((invitee) => invitee.invited).length && message(styles.message)}
           <div className={houseParty}>
             <div className={styles.room}>
-              {this.renderFriends(ourFriends)}
+              {this.renderFriends(ourFriends, party)}
             </div>
           </div>
         </div>
@@ -94,13 +67,15 @@ export default class HouseParty extends Component {
 
 HouseParty.displayName = "HouseParty";
 
-HouseParty.PropTypes = {
+HouseParty.propTypes = {
   ourFriends: PropTypes.array,
-  message: PropTypes.string
+  message: PropTypes.func,
+  invitees: PropTypes.array,
+  view: PropTypes.object,
+  toggleGuest: PropTypes.func
 };
 
 HouseParty.defaultProps = {
-  ourFriends: [],
-  message: `Let's party! Un-comment the all the commented-out lines in the
-  playground then check the boxes on the GuestList to invite our friends to the party!`
+  message: `<p>Let's party! Un-comment the all the commented-out lines in the
+  playground then check the boxes on the GuestList to invite our friends to the party!</p>`
 };
