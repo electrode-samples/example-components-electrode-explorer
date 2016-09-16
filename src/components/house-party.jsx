@@ -15,6 +15,14 @@ export default class HouseParty extends Component {
     };
   }
 
+  componentWillReceiveProps(nextProps) {
+    this.setState = {
+      invitees: nextProps.ourFriends.map(({name}) => {
+        return { name, invited: false};
+      })
+    };
+  }
+
   renderFriends(friends) {
     const invitees = this.state.invitees;
     const partyTime = invitees.length === invitees.filter((i) => i.invited).length
