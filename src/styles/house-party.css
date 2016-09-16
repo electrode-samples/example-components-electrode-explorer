@@ -1,5 +1,3 @@
-@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
-
 body {
   font-family: sans-serif;
 }
@@ -28,25 +26,12 @@ p {
     transform: scale3d(1, 1, 1);
   }
 }
-
 .party {
   animation-name: shake;
   animation-duration: 1s;
   animation-fill-mode: both;
   animation-iteration-count: infinite;
 }
-
-label { font-size: 24px; }
-input[type=checkbox] { display:none; }
-input[type=checkbox] + label:before {
-  font-family: FontAwesome;
-  display: inline-block;
-}
-input[type=checkbox] + label:before { content: "\f096"; }
-input[type=checkbox] + label:before { letter-spacing: 10px; }
-input[type=checkbox]:checked + label:before { content: "\f046"; }
-input[type=checkbox]:checked + label:before { letter-spacing: 5px; }
-
 .houseParty {
 	-webkit-clip-path: polygon(2% 97%, 98% 97%, 98% 44%, 51% 8%, 3% 45%);
   clip-path: polygon(2% 97%, 98% 97%, 98% 44%, 51% 8%, 3% 45%);
