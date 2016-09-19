@@ -1,7 +1,7 @@
 {
-  "name": "electrode-houseparty-example-component",
-  "version": "2.0.0",
-  "description": "electrode-houseparty-example-component",
+  "name": "example-components-electrode-explorer",
+  "version": "1.0.0",
+  "description": "example-components-electrode-explorer",
   "main": "lib/index.js",
   "author": {
     "name": "james-mcintyre",
@@ -9,12 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/electrode-io/electrode-houseparty-example-component.git"
+    "url": "https://github.com/electrode-io/example-components-electrode-explorer.git"
   },
   "bugs": {
-    "url": "https://github.com/electrode-io/electrode-houseparty-example-component/issues"
+    "url": "https://github.com/electrode-io/example-components-electrode-explorer/issues"
   },
-  "homepage": "https://github.com/electrode-io/electrode-houseparty-example-component",
+  "homepage": "https://github.com/electrode-io/example-components-electrode-explorer",
   "dependencies": {},
   "devDependencies": {
     "electrode-archetype-react-component": "^1.1.0",
